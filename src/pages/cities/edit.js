@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function editPost() {
+function CityEdit() {
   return(
     <div>
       <h1>Edit City</h1>
@@ -12,4 +12,4 @@ function editPost() {
   )
 }
 
-export default editPost
+export default CityEdit

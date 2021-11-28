@@ -1,11 +1,11 @@
 import React from 'react'
-import Nav from './Nav'
+import Menu from './Menu'
 import States from './pages/states/states'
 import Cities from './pages/cities/cities'
-import statePost from './pages/states/post'
-import stateEdit from './pages/states/edit'
-import cityPost from './pages/cities/post'
-import cityEdit from './pages/cities/edit'
+import StatePost from './pages/states/post'
+import StateEdit from './pages/states/edit'
+import CityPost from './pages/cities/post'
+import CityEdit from './pages/cities/edit'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 
@@ -13,25 +13,18 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        <Menu />
         <Switch>
-          <Route exact path="/" component={Home} />
           <Route path="/states/states" component={States} />
           <Route path="/cities/cities" component={Cities} />
-          <Route path="/states/post" component={statePost} />
-          <Route path="/states/edit" component={stateEdit} />
-          <Route path="/cities/post" component={cityPost} />
-          <Route path="/cities/edit" component={cityEdit} />
+          <Route path="/states/post" component={StatePost} />
+          <Route path="/states/edit/:id" component={StateEdit} />
+          <Route path="/cities/post" component={CityPost} />
+          <Route path="/cities/edit/:id" component={CityEdit} />
         </Switch>
       </div>
     </Router>
   )
 }
-
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-)
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function cityPost() {
+function CityPost() {
   return(
     <div>
       <h1>Post City</h1>
@@ -12,4 +12,4 @@ function cityPost() {
   )
 }
 
-export default cityPost
+export default CityPost
