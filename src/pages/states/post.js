@@ -1,11 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Post() {
+function statePost() {
   return(
     <div>
-      <h1>Post</h1>
+      <h1>Post State</h1>
+      <Link to='/states/states'>
+      <button>Back</button>
+      </Link>
     </div>
   )
 }
 
-export default Post
+export default statePost

@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function stateEdit() {
+function cityPost() {
   return(
     <div>
-      <h1>Edit State</h1>
-      <Link to='/states/states'>
+      <h1>Post City</h1>
+      <Link to='/cities/cities'>
       <button>Back</button>
       </Link>
     </div>
   )
 }
 
-export default stateEdit
+export default cityPost
