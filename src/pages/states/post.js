@@ -16,7 +16,7 @@ function StatePost() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(validationPost)
   })
-  const onSubmit = data => axios.post('http://api-registrations.herokuapp.com/api/v1/states', data)
+  const onSubmit = data => axios.post('https://api-registrations.herokuapp.com/api/v1/states', data)
     .then(() => {
       console.log("Deu certo")
       history.push('/states/states')
