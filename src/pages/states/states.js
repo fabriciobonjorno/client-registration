@@ -8,7 +8,7 @@ function States() {
   const [states, setStates] = useState([])
 
   useEffect(() => {
-    axios.get('http://api-registrations.herokuapp.com/api/v1/states')
+    axios.get('http://localhost:3001//api/v1/states')
       .then((response) => {
         setStates(response.data.states)
       }).catch(() => {
@@ -18,7 +18,7 @@ function States() {
 
   function deleteState(id) {
 
-    axios.delete(`http://api-registrations.herokuapp.com/api/v1/states/${id}`)
+    axios.delete(`http://localhost:3001//api/v1/states/${id}`)
 
     setStates(states.filter(state => state.id !== id))
 

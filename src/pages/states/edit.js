@@ -17,7 +17,7 @@ function StateEdit() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(validationPost)
   })
-  const onSubmit = data => axios.put(`http://api-registrations.herokuapp.com/api/v1/states/${id}`, data)
+  const onSubmit = data => axios.put(`http://localhost:3001//api/v1/states/${id}`, data)
     .then(() => {
       console.log("Deu certo")
       history.push('/states/states')
@@ -26,7 +26,7 @@ function StateEdit() {
     })
 
   useEffect(() => {
-    axios.get(`http://api-registrations.herokuapp.com/api/v1/states/${id}`)
+    axios.get(`http://localhost:3001//api/v1/states/${id}`)
       .then((response) => {
         reset(response.data)
       })

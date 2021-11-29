@@ -17,7 +17,7 @@ function CityPost() {
   })
 
   useEffect(() => {
-    axios.get('http://api-registrations.herokuapp.com/api/v1/states')
+    axios.get('http://localhost:3001//api/v1/states')
       .then((response) => {
         setStates(response.data.states)
       }).catch(() => {
@@ -26,7 +26,7 @@ function CityPost() {
   }, [])
 
   const [states, setStates] = useState([])
-  const onSubmit = data => axios.post('http://api-registrations.herokuapp.com/api/v1/cities', data)
+  const onSubmit = data => axios.post('http://localhost:3001//api/v1/cities', data)
     .then(() => {
       console.log("Deu certo")
       history.push('/cities/cities')
